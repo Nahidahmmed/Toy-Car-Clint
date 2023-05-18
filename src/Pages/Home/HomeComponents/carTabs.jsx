@@ -24,7 +24,7 @@ const CarTabs = () => {
 
 
     return (
-        <div className="ml-5 mr-5">
+        <div className="ml-5 mr-5 mt-24">
         <Tabs selectedIndex={activeTab} onSelect={handleTabChange}>
           <TabList>
             <div className="flex space-x-5">
@@ -36,10 +36,10 @@ const CarTabs = () => {
   
           {categories.map((category, index) => (
             <TabPanel key={index}>
-              <div className="subCategories lg:grid grid-cols-2 gap-4">
+              <div className="subCategories w-6/12 lg:grid grid-cols-2 gap-4">
                 {category.toys.map((toy, index) => (
                   <div key={index} className="toyCard">
-                    <img src={toy.image} alt={toy.name} />
+                    <img className="w-72 h-2/4" src={toy.image} alt={toy.name} />
                     <h3>{toy.name}</h3>
                     <p>{toy.price}</p>
                     <p>Rating: {toy.rating}</p>
