@@ -20,7 +20,7 @@ const Section1 = () => {
               <div className="flex items-center">
                 <img
                   className="w-12 h-12 rounded-full mr-4"
-                  src="customer1.jpg"
+                  src="https://i.ibb.co/HdLxZMf/Whats-App-Image-2023-04-14-at-1-25-07-PM.jpg"
                   alt="Customer 1"
                 />
                 <div>
@@ -33,7 +33,7 @@ const Section1 = () => {
               <div className="flex items-center">
                 <img
                   className="w-12 h-12 rounded-full mr-4"
-                  src="customer2.jpg"
+                  src="https://i.ibb.co/59jqRzZ/322185638-3357935924494493-8752149992047827713-n.jpg"
                   alt="Customer 2"
                 />
                 <div>
