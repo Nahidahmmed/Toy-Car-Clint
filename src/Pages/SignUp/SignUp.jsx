@@ -1,59 +1,54 @@
+import { Link } from "react-router-dom";
 
 
 const SignUp = () => {
+
+    const handleSignUp = (event) =>{
+        event.preventDefault()
+    }
+
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
-      <form className="bg-white rounded-lg shadow p-8 sm:p-10 md:p-12 lg:p-16 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-        <div>
-          <label htmlFor="name" className="block font-medium mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-blue-500"
-          />
+        <div className="hero min-h-screen bg-base-200 ">
+            <div className="hero-content flex-col  w-4/5 lg:flex-row-reverse">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
+                    <form>
+                        <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">name</span>
+                                </label>
+                                <input type="text" name="name" placeholder="name" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="text" placeholder="email" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type="text" name="password" placeholder="password" className="input input-bordered" />
+                                <label className="label">
+                                </label>
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="Photo url" className="input input-bordered" />
+                                <p>Already have a account ? <Link to="/login"><span className="text-blue-600">login</span></Link></p>
+                            </div>
+                            <div className="form-control mt-6">
+                                <input onClick={handleSignUp} className="btn btn-primary" type="submit" value="Login" />
+                                <input onClick={{}} className="btn btn-primary mt-5" type="submit" value="Google" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-          <label htmlFor="email" className="block font-medium mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-blue-500"
-          />
-        </div>
-        <div>
-          <label htmlFor="password" className="block font-medium mb-1">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-blue-500"
-          />
-        </div>
-        <div className="sm:col-span-2">
-          <label htmlFor="photoUrl" className="block font-medium mb-1">
-            Photo URL
-          </label>
-          <input
-            type="text"
-            id="photoUrl"
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-blue-500"
-          />
-        </div>
-        <div className="sm:col-span-2">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white rounded-lg px-6 py-3 w-full font-medium focus:outline-none hover:bg-blue-600"
-          >
-            Register
-          </button>
-        </div>
-      </form>
-    </div>
     );
 };
 

@@ -9,6 +9,10 @@ const Header = () => {
 
     const username = 'nahid'
 
+    const  handleLogOut= () => {
+        setIsLoggedIn(false)
+    }
+
     return (
         <div className="navbar bg-gray-800 text-white h-20">
             <div className="navbar-start">
@@ -46,13 +50,13 @@ const Header = () => {
                         onMouseLeave={() => setShowUsername(false)}
                     />
                     <div className="navbar-end w-24">
-                        <Link className="btn">Log Out</Link>
+                        <Link className="btn" onClick={handleLogOut}>Log Out</Link>
                     </div>
                     {showUsername && <span>{username}</span>}
                 </div>
             ) : (
                 <div className="navbar-end">
-                    <Link className="btn">Login</Link>
+                    <Link to={'/login'} className="btn">Login</Link>
                 </div>
             )}
 
