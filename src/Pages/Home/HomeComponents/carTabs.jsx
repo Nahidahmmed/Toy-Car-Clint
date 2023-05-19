@@ -10,7 +10,7 @@ const CarTabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     useEffect(() => {
-        fetch('/public/CarData.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => {
                 setCategories(data);

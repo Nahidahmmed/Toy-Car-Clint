@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Blog = () => {
     return (
@@ -23,7 +23,7 @@ const Blog = () => {
                 <h1 className='font-semibold'>*
                     What is MongoDB aggregate and how does it work?</h1>
                 <p><span className='font-bold'>Ans:
-                   </span> MongoDB's aggregate is a flexible and powerful feature that enables advanced data processing and aggregation on collections. It operates using a pipeline model, where data flows through a series of stages, each performing a specific operation. The pipeline stages can include filtering, grouping, sorting, projecting, and performing calculations on the data. Each stage takes input from the previous stage and produces output for the next, allowing for complex and customized data transformations. The aggregate framework in MongoDB provides a versatile and efficient way to analyze and aggregate data based on specific criteria, making it a valuable tool for data-driven applications.</p>
+                   </span>mongo db aggregate is a flexible and powerful feature that enables advanced data processing and aggregation on collections. It operates using a pipeline model, where data flows through a series of stages, each performing a specific operation. The pipeline stages can include filtering, grouping, sorting, projecting, and performing calculations on the data. Each stage takes input from the previous stage and produces output for the next, allowing for complex and customized data transformations. The aggregate framework in MongoDB provides a versatile and efficient way to analyze and aggregate data based on specific criteria, making it a valuable tool for data-driven applications.</p>
 
             </div>
         </section>
