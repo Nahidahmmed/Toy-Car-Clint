@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const AddToy = () => {
-    const notify = () => toast("Wow so easy!");
+    const notify = () => toast("Toy added successfully");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,8 +30,9 @@ const AddToy = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    notify();
+                    notify(data.message);
                 }
+                form.reset();
             })
             .catch(error => console.log(error))
     };

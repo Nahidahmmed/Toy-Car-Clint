@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 
 const Header = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+   
     const [showUsername, setShowUsername] = useState(false);
+    const { user } = useContext(AuthContext);
 
     const username = 'nahid'
+    console.log(user);
 
     const  handleLogOut= () => {
-        setIsLoggedIn(false)
+        
     }
 
     return (
@@ -21,26 +24,35 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  text-gray-800 font-bold">
-                        <li><Link> Home</Link></li>
-                        <li><Link> All Toys</Link></li>
+
+                        { user ? 
+                        <div><li><Link> Home</Link></li>
+                        <li><Link to="/blog"> Blogs</Link></li></div>
+                        : 
+                        <div><li><Link> All Toys</Link></li>
                         <li><Link>My Toys</Link></li>
-                        <li><Link to='/addToy'> Add A Toy</Link></li>
-                        <li><Link to="/blog"> Blogs</Link></li>
+                        <li><Link to='/addToy'> Add A Toy</Link></li></div>
+                        }
+                        
+                        
+                        
                     </ul>
                 </div>
                 <Link to="/" className="btn btn-ghost normal-case text-xl">Toy Cars Central</Link>
             </div>
             <div className="hidden md:flex lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link> Home</Link></li>
-                    <li><Link> All Toys</Link></li>
-                    <li><Link>My Toys</Link></li>
-                    <li><Link  to='/addToy'> Add A Toy</Link></li>
-                    <li><Link to="/blog"> Blogs</Link></li>
+                { user? 
+                        <><li><Link> Home</Link></li>
+                        <li><Link to="/blog"> Blogs</Link></li></>
+                        : <><li><Link> All Toys</Link></li>
+                        <li><Link>My Toys</Link></li>
+                        <li><Link to='/addToy'> Add A Toy</Link></li></>
+                        }
                 </ul>
             </div>
             {/* user profile */}
-            {isLoggedIn ? (
+            {user ? (
                 <div className="flex items-center space-x-2">
                     <img
                         src="/path/to/profile-picture.jpg"
