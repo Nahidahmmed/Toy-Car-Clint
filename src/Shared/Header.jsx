@@ -5,15 +5,17 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Header = () => {
-   
+
     const [showUsername, setShowUsername] = useState(false);
-    const { user } = useContext(AuthContext);
+    const { user,logOut } = useContext(AuthContext);
 
     const username = 'nahid'
     console.log(user);
 
-    const  handleLogOut= () => {
-        
+    const handleLogOut = () => {
+        logOut()
+        .then()
+        .catch(error => console.log(error))
     }
 
     return (
@@ -25,30 +27,37 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  text-gray-800 font-bold">
 
-                        { user ? 
-                        <div><li><Link> Home</Link></li>
-                        <li><Link to="/blog"> Blogs</Link></li></div>
-                        : 
-                        <div><li><Link> All Toys</Link></li>
-                        <li><Link>My Toys</Link></li>
-                        <li><Link to='/addToy'> Add A Toy</Link></li></div>
+                        {!user &&
+                            <div><li><Link> Home</Link></li>
+                                <li><Link to="/blog"> Blogs</Link></li></div>}
+                        {
+                            user && <>
+                                <li><Link> Home</Link></li>
+                                <li><Link to="/blog"> Blogs</Link></li>
+                                <li><Link  to="/alltoys"> All Toys</Link></li>
+                                <li><Link>My Toys</Link></li>
+                                <li><Link to='/addToy'> Add A Toy</Link></li></>
                         }
-                        
-                        
-                        
+
+
+
                     </ul>
                 </div>
                 <Link to="/" className="btn btn-ghost normal-case text-xl">Toy Cars Central</Link>
             </div>
             <div className="hidden md:flex lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                { user? 
-                        <><li><Link> Home</Link></li>
-                        <li><Link to="/blog"> Blogs</Link></li></>
-                        : <><li><Link> All Toys</Link></li>
-                        <li><Link>My Toys</Link></li>
-                        <li><Link to='/addToy'> Add A Toy</Link></li></>
-                        }
+                    {!user &&
+                        <div className="flex"><li><Link> Home</Link></li>
+                            <li><Link to="/blog"> Blogs</Link></li></div>}
+                    {
+                        user && <>
+                            <li><Link> Home</Link></li>
+                            <li><Link to="/blog"> Blogs</Link></li>
+                            <li><Link  to="/alltoys"> All Toys</Link></li>
+                            <li><Link>My Toys</Link></li>
+                            <li><Link to='/addToy'> Add A Toy</Link></li></>
+                    }
                 </ul>
             </div>
             {/* user profile */}

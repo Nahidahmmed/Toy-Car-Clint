@@ -2,14 +2,14 @@
     {
       "name": "Remote-Controlled Cars",
       "toys": [
-        {
+        { "id":"1",
           "name": "Off-Road Monster Truck",
           "price": "$50",
           "image": "https://i.ibb.co/sWbwPcz/car-1.jpg",
           "rating": 4.5,
           "details": "View Details"
         },
-        {
+        {"id":"2",
           "name": "High-Speed Sports Car",
           "price": "$$70",
           "image": "https://i.ibb.co/R09DTJd/car-2.jpg",
@@ -21,14 +21,14 @@
     {
       "name": "Die-Cast Cars:",
       "toys": [
-        {
+        {"id":"3",
           "name": "Classic Muscle Car",
           "price": " $20",
           "image": "https://i.ibb.co/6wDJqVY/car-3.webp",
           "rating": 4.2,
           "details": "View Details"
         },
-        {
+        {"id":"4",
           "name": "Formula 1 Race Car",
           "price": "$30",
           "image": "https://i.ibb.co/9r7T7Gm/car-4.webp",
@@ -40,14 +40,14 @@
     {
       "name": "Construction/Building Cars",
       "toys": [
-        {
+        {"id":"5",
           "name": "LEGO Technic Bulldozer",
           "price": "$60",   
           "image": "https://i.ibb.co/qRdkGLn/car-5.jpg",
           "rating": 4.8,
           "details": "View Details"
         },
-        {
+        {"id":"6",
           "name": "Magnetic Building Block Dump Truck",
           "price": "$35",
           "image": "https://i.ibb.co/P55kJrV/car-6.jpg",

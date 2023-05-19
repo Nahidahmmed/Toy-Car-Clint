@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 const Section2 = () => {
     return (
-        <section className="bg-blue-900 py-20">
+        <section className="bg-blue-900 py-20  mt-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">

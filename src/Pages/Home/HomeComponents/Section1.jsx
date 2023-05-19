@@ -3,7 +3,7 @@
 const Section1 = () => {
     return (
         <div>
-              <section className="bg-gray-100 py-12">
+              <section className=" mt-72 bg-gray-100 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -16,7 +16,7 @@ const Section1 = () => {
         <div className="mt-10">
           <div className="max-w-3xl mx-auto space-y-8">
             {/* Testimonial cards */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="bg-white p-6 rounded-lg shadow-lg  mt-32">
               <div className="flex items-center">
                 <img
                   className="w-12 h-12 rounded-full mr-4"
