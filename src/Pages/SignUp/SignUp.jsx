@@ -4,7 +4,15 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser,googleSignIn } = useContext(AuthContext);
+
+    const handleGoogleLogin =()=>{
+        googleSignIn()
+        .then(res => {
+            console.log(res.user);
+        })
+        .catch(error => console.log(error))
+    }
 
     const handleSignUp = (event) =>{
         event.preventDefault();
@@ -57,7 +65,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="register" />
-                                <input className="btn btn-primary mt-5" type="submit" value="Google" />
+                                <input onClick={handleGoogleLogin} className="btn btn-primary mt-5" type="submit" value="Google" />
                             </div>
                         </div>
                     </form>

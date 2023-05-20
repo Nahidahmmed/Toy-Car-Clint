@@ -63,7 +63,7 @@ const Header = () => {
                     <img
                         src="/path/to/profile-picture.jpg"
                         alt="Profile"
-                        className="w-8 h-8 rounded-full cursor-pointer"
+                        className="w-10 h-8 rounded-full cursor-pointer"
                         onMouseEnter={() => setShowUsername(true)}
                         onMouseLeave={() => setShowUsername(false)}
                     />

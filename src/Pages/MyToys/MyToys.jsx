@@ -14,7 +14,7 @@ const MyToys = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setMyToys(data))
-    }, [])
+    }, [url])
     const handleDelete = id =>{
         const proceed = confirm('are you sure you want to delete')
         if(proceed){
