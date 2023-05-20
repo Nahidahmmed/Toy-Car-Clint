@@ -13,7 +13,7 @@ const CarTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const notify = () => toast("You have to log in first to view details");
   useEffect(() => {
-    fetch('http://localhost:5000/newcars')
+    fetch('https://assignment-11-server-phi-azure.vercel.app/newcars')
       .then(res => res.json())
       .then(data => {
         setCategories(data);

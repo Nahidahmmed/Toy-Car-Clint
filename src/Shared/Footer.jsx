@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-8 flex flex-wrap justify-center items-center">
             <div className="flex-shrink-0 w-full sm:w-auto">
-              <img className="h-8 w-auto" src="/path/to/logo.png" alt="Logo" />
+              
             </div>
             <div className="mt-4 sm:mt-0 sm:ml-10">
               <p className="text-center sm:text-left text-gray-300">© 2023 Your Website. All rights reserved.</p>

@@ -8,7 +8,7 @@ const MyToys = () => {
     const notify = () => toast("deleted successfully");
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
-    const url = `http://localhost:5000/addedToys?sellerEmail=${user?.email}`
+    const url = `https://assignment-11-server-phi-azure.vercel.app?sellerEmail=${user?.email}`
 
     useEffect(() => {
         fetch(url)

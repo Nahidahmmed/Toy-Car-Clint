@@ -41,12 +41,12 @@ const router = createBrowserRouter([
         {
           path:'/alltoys',
           element:<AllToys></AllToys>,
-          loader: () => fetch('http://localhost:5000/addedToys')
+          loader: () => fetch('https://assignment-11-server-phi-azure.vercel.app/addedToys')
         },
         {
           path:'/detail/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/addedToys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-11-server-phi-azure.vercel.app/addedToys/${params.id}`)
         },
         {
           path:'/myToys',

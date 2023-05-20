@@ -27,7 +27,7 @@ console.log(user.email);
         const data = { name, photo, sellerEmail, sellerName, category, price, rating, quantity, description }
         console.log(data);
 
-        fetch("http://localhost:5000/addedToys", {
+        fetch("https://assignment-11-server-phi-azure.vercel.app/addedToys", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
