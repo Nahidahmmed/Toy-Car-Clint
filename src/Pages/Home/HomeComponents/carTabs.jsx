@@ -49,7 +49,7 @@ const CarTabs = () => {
                     <h3>{toy.name}</h3>
                     <p>{toy.price}</p>
                     <p>Rating: {toy.rating}</p>
-                    <Link to={`/details/:${toy._id}`}><button onClick={handleDetails} className="btn btn-primary">{toy.details}</button></Link>
+                    <Link to={`/login`}><button onClick={handleDetails} className="btn btn-primary">{toy.details}</button></Link>
                   </div>
                 </div>
               ))}
