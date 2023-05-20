@@ -1,8 +1,15 @@
+
+import { useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../Provider/AuthProvider';
+
+
 
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext);
+console.log(user.email);
     const notify = () => toast("Toy added successfully");
 
     const handleSubmit = (event) => {
@@ -34,7 +41,9 @@ const AddToy = () => {
                 }
                 form.reset();
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
+
+        
     };
     return (
         <div className="text-white font-bold bg-gray-700 min-h-screen">
@@ -86,6 +95,7 @@ const AddToy = () => {
                             type="email"
                             id="sellerEmail"
                             name="sellerEmail"
+                            defaultValue={user.email}
                             className="w-full text-gray-800 border-gray-300 rounded-md px-3 py-2"
                         />
                     </div>

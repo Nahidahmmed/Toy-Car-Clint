@@ -9,7 +9,9 @@ const AllToys = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.search.value;
-        console.log(name);
+       const toy = {name}
+       console.log(toy);
+        
     }
     return (
         
@@ -39,7 +41,7 @@ const AllToys = () => {
                 <td className="py-2 px-10 border-b">{toy.price}</td>
                 <td className="py-2 px-16 border-b">{toy.quantity}</td>
                 <td className="py-2 px-10 border-b">
-                  <Link to={`/detail/:${toy._id}`}>
+                  <Link to={`/detail/${toy._id}`}>
                   <button className="btn text-white px-3 py-1 rounded-md">
                     View Details
                   </button>

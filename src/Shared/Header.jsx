@@ -9,9 +9,6 @@ const Header = () => {
     const [showUsername, setShowUsername] = useState(false);
     const { user,logOut } = useContext(AuthContext);
 
-    const username = 'nahid'
-    console.log(user);
-
     const handleLogOut = () => {
         logOut()
         .then()
@@ -28,14 +25,14 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  text-gray-800 font-bold">
 
                         {!user &&
-                            <div><li><Link> Home</Link></li>
+                            <div><li><Link to="/"> Home</Link></li>
                                 <li><Link to="/blog"> Blogs</Link></li></div>}
                         {
                             user && <>
-                                <li><Link> Home</Link></li>
+                                <li><Link to="/"> Home</Link></li>
                                 <li><Link to="/blog"> Blogs</Link></li>
                                 <li><Link  to="/alltoys"> All Toys</Link></li>
-                                <li><Link>My Toys</Link></li>
+                                <li><Link to="/myToys">My Toys</Link></li>
                                 <li><Link to='/addToy'> Add A Toy</Link></li></>
                         }
 
@@ -48,14 +45,14 @@ const Header = () => {
             <div className="hidden md:flex lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {!user &&
-                        <div className="flex"><li><Link> Home</Link></li>
+                        <div className="flex"><li><Link  to="/"> Home</Link></li>
                             <li><Link to="/blog"> Blogs</Link></li></div>}
                     {
                         user && <>
-                            <li><Link> Home</Link></li>
+                            <li><Link to="/"> Home</Link></li>
                             <li><Link to="/blog"> Blogs</Link></li>
                             <li><Link  to="/alltoys"> All Toys</Link></li>
-                            <li><Link>My Toys</Link></li>
+                            <li><Link  to="/myToys">My Toys</Link></li>
                             <li><Link to='/addToy'> Add A Toy</Link></li></>
                     }
                 </ul>
@@ -73,7 +70,7 @@ const Header = () => {
                     <div className="navbar-end w-24">
                         <Link className="btn" onClick={handleLogOut}>Log Out</Link>
                     </div>
-                    {showUsername && <span>{username}</span>}
+                    {showUsername && <span>{user?.displayName}</span>}
                 </div>
             ) : (
                 <div className="navbar-end">
